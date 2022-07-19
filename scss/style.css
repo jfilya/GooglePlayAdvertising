@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
@@ -75,7 +76,17 @@ body {
   padding-left: 20px;
   margin-bottom: 20px;
 }
-.container__checkbox_basides {
+.container__list_checkbox li {
+  list-style-type: none;
+  padding-left: 5px;
+  position: relative;
+}
+.container__list_checkbox li::before {
+  content: "✅";
+  position: absolute;
+  left: -20px;
+}
+.container__list_checkbox li:last-child {
   margin-bottom: 20px;
 }
 .container__download {

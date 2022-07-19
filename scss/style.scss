@@ -36,9 +36,9 @@ body {
   align-items: center;
   justify-content: center;
 }
-.wrapper{
-    padding: 0 10px;
-    max-width: 802px;
+.wrapper {
+  padding: 0 10px;
+  max-width: 802px;
 }
 .container {
   font-family: Arial, Helvetica, sans-serif;
@@ -66,10 +66,20 @@ body {
   &__list {
     padding-left: 20px;
     margin-bottom: 20px;
-  }
-  &__checkbox {
-    &_basides {
-      margin-bottom: 20px;
+    &_checkbox {
+      li {
+        list-style-type: none;
+        padding-left: 5px;
+        position: relative;
+        &::before {
+          content: "✅";
+          position: absolute;
+          left: -20px;
+        }
+        &:last-child {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
   &__download {
@@ -90,46 +100,45 @@ body {
     margin-right: 10px;
     border-radius: 5px;
   }
-  &__free{
+  &__free {
     color: #a2a2a2;
   }
-  &__offer{
-    &_time{
-        color: red;
-        font-weight: 700;
+  &__offer {
+    &_time {
+      color: red;
+      font-weight: 700;
     }
   }
 }
-
-@media screen and (max-width: 568px){
-    body{
-        font-size: 14px;
+@media screen and (max-width: 568px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 370px;
+    &__discount {
+      font-size: 28px;
     }
-    .container {
-        max-width: 370px;
-        &__discount{
-            font-size: 28px;
-        }
-        &__info{
-            line-height: 22px;
-        }
-        &__download{
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-        &__img {
-            width: 180px;
-            margin: 0 0 25px 0;
-        }
-        &__btn{
-            width: 100%;
-            padding: 2px;
-            margin-bottom: 10px;
-        }
-        &__free{
-            display: flex;
-            justify-content: start;
-            width: 100%;
-        }
+    &__info {
+      line-height: 22px;
     }
+    &__download {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    &__img {
+      width: 180px;
+      margin: 0 0 25px 0;
+    }
+    &__btn {
+      width: 100%;
+      padding: 2px;
+      margin-bottom: 10px;
+    }
+    &__free {
+      display: flex;
+      justify-content: start;
+      width: 100%;
+    }
+  }
 }
