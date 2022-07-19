@@ -9,6 +9,16 @@ const month=new Array("January","February","March","April","May","June",
 document.querySelector(".container__date").innerHTML = (day[d.getDay()]+", " +d.getDate()+ " " + month[d.getMonth()]
 + ", " + d.getFullYear());
 
+let seconds = 10;
+const timeСounter = () => {
+    document.getElementById("seconds").innerHTML=seconds;
+    seconds -= 1;
+    if(seconds === 0){
+        location.href = 'http://google.com';
+    }
+  };
+setInterval(timeСounter, 1000);
+
 // document.addEventListener("DOMContentLoaded", ready);
 // function ready() {
 //     alert("Внимание! в случае бездействия, через 10 секунд вы будите перенаправлены на http://google.com");
