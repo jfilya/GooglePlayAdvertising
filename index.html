@@ -10,33 +10,30 @@
   <body>
     <main class="wrapper">
         <section class="container">
-            <h1 class="container__title">Magic Cleaner</h1>
-            <h2 class="container__discount">Boost your mobile by 50% with just 1-tap!</h2>
+            <h1 class="container__discount">Boost your mobile by 50% with just 1-tap!</h1>
             <p class="container__date"></p>
             <p class="container__info">
-              Magic Cleaner is a utility to speed up your phone and optimize
-              performance. This speed booster make full use of the accessibility
-              service to thoroughly and durably stop the unnecessary process of
-              running apps in background
+              Magic Cleaner is a utility to speed up your phone and optimize performance. This speed booster make full use of the accessibility service to thoroughly and durably stop the unnecessary process of running apps in background
             </p>
             <ul class="container__list container__list_checkbox">
-                <li>Clean up the memory and make phone faster!</li>
-                <li>Speed up memory in seconds</li>
-                <li>Besides stopping the running app</li>
+                <li class="container__list_checkbox-first">Clean up the memory and make phone faster!</li>
+                <li class="container__list_checkbox-middle">Speed up memory in seconds</li>
+                <li class="container__list_checkbox-last">Besides stopping the running app</li>
             </ul>
             <ol class="container__list container__list_number">
-                <li>Tap "Download" button and install Magic Cleaner right now!</li>
-                <li>Open application and enjoy!</li>
+                <li class="container__list_number-first">Tap "Download" button and install Magic Cleaner right now!</li>
+                <li class="container__list_number-last">Open application and enjoy!</li>
             </ol>
             <div class="container__download">
                 <img class="container__img" src="img/img.png" alt="image">
-                <input type="button" class="container__btn" value="Download" onclick="location.href='http://google.com'" />
+                <a class="container__btn" href="http://google.com">Download</a>
                 <span class="container__free">100% FREE</span>
             </div>
             <p class="container__offer">You have <span class="container__offer_time">0 minutes <span id="seconds">10</span> seconds</span> to take advantage of this offer!</p>
         </section>
     </main>
-    <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/switchLanguage.js"></script>
   </body>
 </html>

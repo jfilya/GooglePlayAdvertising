@@ -56,9 +56,6 @@ body {
   border: 1px solid #d1d1d1;
   margin-bottom: 10px;
 }
-.container__title {
-  display: none;
-}
 .container__discount {
   color: #ee993c;
   font-weight: 400;

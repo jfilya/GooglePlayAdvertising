@@ -1,30 +1,23 @@
 const d = new Date();
 
-const day=new Array("Sunday","Monday","Tuesday",
+const dayEn=new Array("Sunday","Monday","Tuesday",
 "Wednesday","Thursday","Friday","Saturday");
 
-const month=new Array("January","February","March","April","May","June",
+const monthEn=new Array("January","February","March","April","May","June",
 "July","August","September","October","November","December");
 
-document.querySelector(".container__date").innerHTML = (day[d.getDay()]+", " +d.getDate()+ " " + month[d.getMonth()]
+if (navigator.language === "en"){
+  document.querySelector(".container__date").innerHTML = (dayEn[d.getDay()]+", " +d.getDate()+ " " + monthEn[d.getMonth()]
 + ", " + d.getFullYear());
+}
+const dayRu=new Array("Воскресенье","Понедельник","Вторник",
+"Среда","Четверг","Пятница","Суббота");
 
-let seconds = 10;
-const timeСounter = () => {
-    document.getElementById("seconds").innerHTML=seconds;
-    seconds -= 1;
-    if(seconds === 0){
-        location.href = 'http://google.com';
-    }
-  };
-setInterval(timeСounter, 1000);
+const monthRu=new Array("января","февраля","марта","апреля","мая","июня",
+"июля","августа","сентября","октября","ноября","декабря");
 
-// document.addEventListener("DOMContentLoaded", ready);
-// function ready() {
-//     alert("Внимание! в случае бездействия, через 10 секунд вы будите перенаправлены на http://google.com");
-//   }
-// const day=new Array("Воскресенье","Понедельник","Вторник",
-// "Среда","Четверг","Пятница","Суббота");
+if (navigator.language === "ru"){
+  document.querySelector(".container__date").innerHTML = (dayRu[d.getDay()]+", " +d.getDate()+ " " + monthRu[d.getMonth()]
++ ", " + d.getFullYear());
+}
 
-// const month=new Array("января","февраля","марта","апреля","мая","июня",
-// "июля","августа","сентября","октября","ноября","декабря");
