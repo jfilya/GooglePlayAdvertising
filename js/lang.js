@@ -21,7 +21,7 @@ const LangArray = {
         "en":"Besides stopping the running app",
     },
     "container__list_number-first": {
-        "ru":"Нажмите кнопку 'Скачать' и установите Magic Cleaner прямо сейчас!",
+        "ru":'Нажмите кнопку "Загрузить" и установите Magic Cleaner прямо сейчас!',
         "en":"Tap 'Download' button and install Magic Cleaner right now!",
     },
     "container__list_number-last": {
