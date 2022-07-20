@@ -1,23 +1,71 @@
 const d = new Date();
 
-const dayEn=new Array("Sunday","Monday","Tuesday",
-"Wednesday","Thursday","Friday","Saturday");
+const dayEn = new Array(
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+);
 
-const monthEn=new Array("January","February","March","April","May","June",
-"July","August","September","October","November","December");
+const monthEn = new Array(
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+);
 
-if (navigator.language === "en"){
-  document.querySelector(".container__date").innerHTML = (dayEn[d.getDay()]+", " +d.getDate()+ " " + monthEn[d.getMonth()]
-+ ", " + d.getFullYear());
-}
-const dayRu=new Array("Воскресенье","Понедельник","Вторник",
-"Среда","Четверг","Пятница","Суббота");
+const dayRu = new Array(
+  "Воскресенье",
+  "Понедельник",
+  "Вторник",
+  "Среда",
+  "Четверг",
+  "Пятница",
+  "Суббота"
+);
 
-const monthRu=new Array("января","февраля","марта","апреля","мая","июня",
-"июля","августа","сентября","октября","ноября","декабря");
+const monthRu = new Array(
+  "января",
+  "февраля",
+  "марта",
+  "апреля",
+  "мая",
+  "июня",
+  "июля",
+  "августа",
+  "сентября",
+  "октября",
+  "ноября",
+  "декабря"
+);
 
-if (navigator.language === "ru"){
-  document.querySelector(".container__date").innerHTML = (dayRu[d.getDay()]+", " +d.getDate()+ " " + monthRu[d.getMonth()]
-+ ", " + d.getFullYear());
-}
-
+const langDate = (dayLang, monthLang) => {
+  document.querySelector(".container__date").innerHTML =
+    dayLang[d.getDay()] +
+    ", " +
+    d.getDate() +
+    " " +
+    monthLang[d.getMonth()] +
+    ", " +
+    d.getFullYear();
+};
+const renameDate = () => {
+  if (window.location.hash.substr(-2) === "en") {
+    langDate(dayEn, monthEn);
+  }
+  if (window.location.hash.substr(-2) === "ru") {
+    langDate(dayRu, monthRu);
+  }
+};
+renameDate();
