@@ -23,4 +23,5 @@ window.onhashchange = function () {
   seconds = 10;
   changeLanguage();
   renameDate();
+  ready();
 };
