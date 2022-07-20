@@ -20,5 +20,8 @@ changeLanguage();
 window.onhashchange = function () {
   lang = window.location.hash.substr(-2);
   location.href = window.location.pathname + "#?lng=" + lang;
+  seconds = 10;
   changeLanguage();
+  renameDate();
+  ready();
 };
