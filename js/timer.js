@@ -1,4 +1,4 @@
-let seconds = 10;
+let seconds = document.getElementById("seconds").innerHTML;
 const timeСounter = () => {
     document.getElementById("seconds").innerHTML=seconds;
     seconds -= 1;
