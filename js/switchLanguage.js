@@ -23,5 +23,7 @@ window.onhashchange = function () {
   seconds = 10;
   changeLanguage();
   renameDate();
-  setTimeout(ready, 5);
+  if(lang === "en" || lang === "ru"){
+    setTimeout(ready, 5);
+  }
 };
