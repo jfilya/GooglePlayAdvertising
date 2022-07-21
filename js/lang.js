@@ -30,7 +30,7 @@ const LangArray = {
     },
     "container__btn": {
         "ru":"Загрузить",
-        "en":"download",
+        "en":"Download",
     },
     "container__free": {
         "ru":"100% бесплатно",

@@ -1,5 +1,5 @@
 const allLanguage = ["en", "ru"];
-  let lang = navigator.language;
+let lang = navigator.language;
 const changeURLLanguage = () => {
   location.href = window.location.pathname + "#?lng=" + lang;
 };
@@ -23,7 +23,7 @@ window.onhashchange = function () {
   seconds = 10;
   changeLanguage();
   renameDate();
-  if(lang === "en" || lang === "ru"){
+  if (allLanguage.includes(lang)) {
     setTimeout(ready, 5);
   }
 };
