@@ -9,4 +9,3 @@ function ready() {
   }
   alert(a);
 }
-setTimeout(ready, 5);
