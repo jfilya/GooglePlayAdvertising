@@ -21,9 +21,9 @@ changeLanguage();
 window.onhashchange = function () {
   lang = window.location.hash.substr(-2);
   seconds = 10;
-  changeLanguage();
   renameDate();
+  changeLanguage();
   if (allLanguage.includes(lang)) {
-    setTimeout(ready, 5);
+    setTimeout(ready, 15);
   }
 };
