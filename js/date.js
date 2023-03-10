@@ -61,7 +61,7 @@ const langDate = (dayLang, monthLang) => {
     d.getFullYear();
 };
 const renameDate = () => {
-  if (window.location.hash.substr(-2) === "en") {
+  if (window.location.hash.substr(-2) !== "ru") {
     langDate(dayEn, monthEn);
   }
   if (window.location.hash.substr(-2) === "ru") {
