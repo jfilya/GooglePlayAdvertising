@@ -1,13 +1,14 @@
-const allLanguage = ["en", "ru"];
-let lang = navigator.language;
+const allLanguage = ["en", "ru",];
+let lang = navigator.language.length === 2 ? navigator.language : navigator.language.substr(-2).toLocaleLowerCase();
 const changeURLLanguage = () => {
   location.href = window.location.pathname + "#?lng=" + lang;
 };
 changeURLLanguage();
 const changeLanguage = () => {
   let hash = window.location.hash.substr(-2);
-  if (!allLanguage.includes(hash)) {
-    location.href = window.location.pathname + "#?lng=en";
+  console.log(hash)
+  if (!allLanguage.includes(hash.toLocaleLowerCase())) {
+    hash ="en";
   }
   for (let key in LangArray) {
     if (document.querySelector("." + key)) {
@@ -23,7 +24,5 @@ window.onhashchange = function () {
   seconds = 10;
   renameDate();
   changeLanguage();
-  if (allLanguage.includes(lang)) {
-    setTimeout(ready, 15);
-  }
+    setTimeout(ready, 150);
 };
