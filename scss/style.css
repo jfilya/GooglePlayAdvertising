@@ -1,0 +1,147 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li,
+body,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+body {
+  font-size: 16px;
+  line-height: 26px;
+  min-width: 320px;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  padding: 0 10px;
+  max-width: 802px;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid #d1d1d1;
+  margin-bottom: 10px;
+}
+.container__discount {
+  color: #ee993c;
+  font-weight: 400;
+  font-size: 30px;
+}
+.container__date {
+  color: #a2a2a2;
+  margin-bottom: 15px;
+}
+.container__info {
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+.container__list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.container__list_checkbox li {
+  list-style-type: none;
+  padding-left: 5px;
+  position: relative;
+}
+.container__list_checkbox li::before {
+  content: "✅";
+  position: absolute;
+  left: -20px;
+}
+.container__list_checkbox li:last-child {
+  margin-bottom: 20px;
+}
+.container__download {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.container__img {
+  margin-right: 20px;
+}
+.container__btn {
+  border: none;
+  background: #799d43;
+  color: #fff;
+  font-size: 35px;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container__free {
+  color: #a2a2a2;
+}
+.container__offer_time {
+  color: red;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 568px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 370px;
+  }
+  .container__discount {
+    font-size: 28px;
+  }
+  .container__info {
+    line-height: 22px;
+  }
+  .container__download {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .container__img {
+    width: 180px;
+    margin: 0 0 25px 0;
+  }
+  .container__btn {
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 10px;
+  }
+  .container__free {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
